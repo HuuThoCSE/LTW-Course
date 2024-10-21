@@ -1,0 +1,1 @@
+https://imagecolorpicker.com/color-code/d00857
