@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h1 {
+        color: red;
+    }
+    table tr td {
+        color: purple;
+        font-weight: bold;
+    }
+    label {
+        color: blue;
+    }
+</style>
+<body>
+    <form action="" method="get">
+        <h1>Đăng ký thông tin</h1>
+        <table>
+            <tr>
+                <td>User name:</td>
+                <td>
+                    <input type="text" name="" id="">
+                </td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td>
+                    <input type="text" name="" id="">
+                </td>
+            </tr>
+            <tr>
+                <td>Giới tính</td>
+                <td>
+                    <label for="">Nam</label> <input type="radio" name="gioitinh" value="Nam">
+                    <label for="">Nữ</label> <input type="radio" name="gioitinh" id="Nu">
+                    Hình
+                    <input type="text">
+                    <input type="file" name="" id="">
+                </td>
+            </tr>
+            <tr>
+                <td>Tỉnh/ Thành phố</td>
+                <td>
+                    <select name="" id="">
+                        <option value="">Other</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Sở thích</td>
+                <td>
+                    <label for="">Thể thao:</label>
+                    <input type="checkbox" name="" id="">
+                    <label for="">Nghe nhạc:</label>
+                    <input type="checkbox" name="" id="">
+                    <label for="">Mua sắm:</label>
+                    <input type="checkbox" name="" id="">
+                    <label for="">Du lịch:</label>
+                    <input type="checkbox" name="" id="">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">Mô tả bản thân:</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <textarea name="" id="" style="width: 100%; overflow-y: scroll;" rows="5"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

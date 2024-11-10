@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+</style>
+<body>
+    <h1>PHIẾU ĐĂNG KÝ</h1>
+    <table>
+        <tr>
+            <td>Họ và tên:</td>
+            <td>
+                <input type="text" name="" id="txtHovaten" style="width: 100%;" required>
+            </td>
+            (*)
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td>
+                <input type="email" name="" id="txtEmail" style="width: 100%;">
+            </td>
+        </tr>
+        <tr>
+            <td>Giới tính:</td>
+            <td>
+                <input type="radio" name="gioitinh" id="Nam" value="Nam" checked> Nam
+                <input type="radio" name="gioitinh" id="Nu" value="Nu"> Nữ
+            </td>
+        </tr>
+        <tr>
+            <td>Tuổi:</td>
+            <td>
+                <input type="text" name="" id="txtTuoi">(*)
+            </td>
+        </tr>
+        <tr>
+            <td>Sở thích</td>
+            <td>
+                <input type="checkbox" class="SoThich" name="" id="chbThethao" value="Thể thao"> Thể thao
+                <input type="checkbox" class="SoThich" name="" id="chbVanhoc" value="Văn học"> Văn học
+            </td>
+        </tr>
+
+        <tr>
+            <td>Chuyên ngành:</td>
+            <td>
+                <select name="" id="chuyenganh">
+                    <option value="Công nghệ Web">Công nghệ Web</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Gửi hình</td>
+            <td>
+                <input type="text" name="" id="">
+                <input type="file" name="" id="">
+            </td>
+        </tr>
+        <tr>
+            <td>Yêu cầu:</td>
+            <td>
+                <textarea name="" id="txtYeucau" rows="3" style="width: 100%;"></textarea>    
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="Gửi thông tin" onclick="submitForm()">
+                <input type="reset" value="Nhập lại" onclick="resetForm()">
+            </td>
+        </tr>
+    </table>
+</body>
+<script>
+    function resetForm() {
+        document.getElementById('txtHovaten').value = '';
+        document.getElementById('txtEmail').value = '';
+        document.getElementById('txtTuoi').value = '';
+        document.getElementById('Nam').checked = true;
+        document.getElementById('Nu').checked = false;
+        document.getElementById('chbThethao').checked = false;
+        document.getElementById('chbVanhoc').checked = false;
+        document.getElementById('txtYeucau').value = '';
+        
+    }
+    function submitForm(){
+        var hoten = document.getElementById('txtHovaten').value;
+        var email = document.getElementById('txtEmail').value;
+
+        let gioitinh = document.querySelector('input[name="gioitinh"]:checked').value;
+    
+        var tuoi = document.getElementById('txtTuoi').value;
+
+        let sothich = [];
+
+        document.querySelectorAll('.SoThich:checked').forEach((checkbox) => {
+            sothich.push(checkbox.value)
+        })
+
+        let chuyennganh = document.getElementById('chuyenganh').value;
+
+        var yeucau = document.getElementById('txtYeucau').value;
+
+        alert(
+            'Họ tên: '+ hoten+'\n'+
+            'Email: '+ email + '\n'+
+            'Giới tính: ' + gioitinh + '\n'+
+            'Tuổi: ' + tuoi + '\n' +
+            'Sở thích: ' + sothich.join(',') + '\n' +
+            'Chuyên ngành: ' + chuyennganh + '\n' +
+            'Hình: ' + "\n" + 
+            'Yêu cầu: ' + yeucau
+        );
+    }
+</script>
+</html>
