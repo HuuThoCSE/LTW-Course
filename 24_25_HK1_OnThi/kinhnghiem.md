@@ -34,3 +34,10 @@ if(hansd < today){
 ```javascript
 document.querySelector('[name="HanSD"]').min = new Date().toISOString().split('T')[0];
 ```
+
+# POST
+## Kinh nghiệm 1
+- Khi POST gửi qua thì phải có name ở input submit
+
+## Kinh nghiệm 2
+- POST nhận chỉ nhận nếu có thuộc name
