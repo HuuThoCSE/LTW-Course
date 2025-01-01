@@ -1,8 +1,14 @@
 
 ## Nhận số không âm?
 ### Cách 1: Dùng hàm
-```
+```javascript
+const dongia = document.getElementById('Dongia').value;
 
+// Kiem tra Don gia
+if (isNaN(dongia) || dongia < 0){ 
+    alert("Đơn giá phải là số không âm");
+    return false;
+}
 ```
 
 ### Cách 2: Dùng min trong thẻ html của input
