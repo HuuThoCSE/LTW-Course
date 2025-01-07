@@ -41,3 +41,10 @@ document.querySelector('[name="HanSD"]').min = new Date().toISOString().split('T
 
 ## Kinh nghiệm 2
 - POST nhận chỉ nhận nếu có thuộc name
+
+# QUERY
+## LIKE
+- Nếu dùng LIKE thì phải có dấu nháy đơn
+```
+LIKE '%.. %'
+```
